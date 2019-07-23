@@ -96,19 +96,6 @@ const TextBoxRow = forwardRef(
       initialValue,
       ref
     );
-    const labelStyleProp =
-      labelClassName === ""
-        ? {}
-        : {
-            className: labelClassName
-          };
-    const inputStyleProp =
-      inputClassName === ""
-        ? {}
-        : {
-            className: inputClassName
-          };
-    const hasLabel = label.length > 0;
     const { valid, ...o } = useValidation((val) => {
       console.log('function call')
       if (val && val.length > 4) {
@@ -121,6 +108,21 @@ const TextBoxRow = forwardRef(
         reasons: ['The value needs to be greater than 4 characters']
       }
     }, inputRef)
+
+    const labelStyleProp =
+      labelClassName === ""
+        ? {}
+        : {
+            className: labelClassName
+          };
+    const inputStyleProp =
+      inputClassName === ""
+        ? {}
+        : {
+            className: classnames(inputClassName, {'is-danger': !valid})
+          };
+    const hasLabel = label.length > 0;
+
     console.log('valid', valid)
     console.log('state of v', o)
     return (
