@@ -2,12 +2,9 @@ import React, { forwardRef, useReducer, useEffect } from "react";
 
 import {
   Button,
-
   Section,
-
   Hero,
   HeroBody,
-
   Title,
   SubTitle,
   useToggle,
@@ -71,7 +68,7 @@ const useValidation = (func, ref) => {
       el.removeEventListener('change', change)
       }
     }
-  }, [el])
+  }, [el, func])
   return { ...state }
 }
 
@@ -155,6 +152,9 @@ export default function App() {
   const { data, error, loading, postData } = usePost(
     "https://kev-pi.herokuapp.com/api/echo"
   );
+
+  console.log({ data, error, loading })
+
   const [modalShown, setModalShown] = useToggle(false);
   return (
     <>
@@ -189,6 +189,13 @@ export default function App() {
             </span>
             </>
           </TextBoxRow>
+          <TextInput
+            name="name1"
+            label="Name 2"
+            labelClassName="label"
+            className="field control has-icons-left has-icons-right"
+            inputClassName="input"
+          />
           <Button isPrimary>Test</Button>
         </Form>
         <Modal
