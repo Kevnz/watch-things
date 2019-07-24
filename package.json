@@ -1,9 +1,9 @@
 {
   "name": "watcher",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
-    "@brightleaf/elements": "^0.12.0",
+    "@brightleaf/elements": "^0.14.0",
     "@brightleaf/react-hooks": "^1.1.0",
     "@reach/router": "^1.2.1",
     "react": "^16.8.6",
