@@ -17,7 +17,7 @@ import {
 import { usePost } from "@brightleaf/react-hooks";
 import classnames from "classnames";
 import { Form, TextInput, useFormElement } from "react-form-elements";
-
+import FEATURES from './features.json'
 const reducer = (state, action) => {
   console.log('state of re', state)
   console.log('action', action)
@@ -154,7 +154,7 @@ export default function App() {
   );
 
   console.log({ data, error, loading })
-
+  console.log('features', FEATURES)
   const [modalShown, setModalShown] = useToggle(false);
   return (
     <>
