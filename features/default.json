@@ -1,5 +1,9 @@
 {
   "HasFeatures": true,
   "FeatureOne": true,
-  "FeatureTwo": false
+  "FeatureTwo": false,
+  "RuleForEmailAndRoleFeature": {
+    "parameters": "email,role",
+    "check": "email.indexOf('test') > -1 && role ==='admin'"
+  }
 }
