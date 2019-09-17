@@ -1,11 +1,5 @@
 version: 2.1
-commands:
-  client_build:
-    description: 'Build The UI Bits'
-    steps:
-      - checkout
-      - run: yarn install
-      - run: yarn build
+
 workflows:
   version: 2
   hourly:
