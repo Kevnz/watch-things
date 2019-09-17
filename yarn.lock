@@ -1198,6 +1198,11 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
+"@kev_nz/async-tools@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@kev_nz/async-tools/-/async-tools-1.2.3.tgz#72bb683f05f497795add5da1c2aae91b58d879ef"
+  integrity sha512-qc09rqBDgxU9cGkBeEHbn+ZVmmNhtd6ai99kl/10/syZLh/V1zhoVobtpnOjf/2V1T74En7QnCCUw882m6SdaQ==
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -2120,6 +2125,13 @@ babylon@^6.18.0:
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.18.0.tgz#af2f3b88fa6f5c1e4c634d1a0f8eac4f55b395e3"
   integrity sha512-q/UEjfGJ2Cm3oKV71DJz9d25TPnq5rhBVL2Q4fA5wcC3jcrdn7+SssEybFIxwAvvP+YCsCYNKughoF33GxgycQ==
 
+back-off@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/back-off/-/back-off-4.2.0.tgz#870e2cef1f4c908c151ddc02b7ce9884ae8feed4"
+  integrity sha512-fwwp12CJ9p5bFTJdeiIIrAS9GAHmh8q9N6IgSEdF1LZ4VpAsqQKbfFiFQRICgy4tYHMe0jCEC8F/1C3fY63lLw==
+  dependencies:
+    "@kev_nz/async-tools" "^1.2.3"
+
 balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
@@ -2932,6 +2944,16 @@ create-react-context@^0.2.1:
     fbjs "^0.8.0"
     gud "^1.0.0"
 
+creature-features@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/creature-features/-/creature-features-4.1.0.tgz#936d33f52aaf5e6a1ceb37e1f256ed99967f2a8a"
+  integrity sha512-2zlfp4iw+3iezNNnebPQgDAJtvx88w1Ec1wCVjSALWKfZjU2q7tpjJoPh5RaCjBml2ICg14w+7UiQ0KyqlFcuQ==
+  dependencies:
+    debug "^4.1.1"
+    end-with "^1.0.2"
+    file-exists "^5.0.1"
+    random-weighted "^1.0.0"
+
 cross-fetch@2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-2.2.2.tgz#a47ff4f7fc712daba8f6a695a11c948440d45723"
@@ -3598,6 +3620,11 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0:
   dependencies:
     once "^1.4.0"
 
+end-with@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/end-with/-/end-with-1.0.2.tgz#a432755ab4f51e7fc74f3a719c6b81df5d668bdc"
+  integrity sha1-pDJ1WrT1Hn/HTzpxnGuB311mi9w=
+
 enhanced-resolve@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-4.1.0.tgz#41c7e0bfdfe74ac1ffe1e57ad6a5c6c9f3742a7f"
@@ -4165,6 +4192,11 @@ file-entry-cache@^5.0.1:
   integrity sha512-bCg29ictuBaKUwwArK4ouCaqDgLZcysCFLmM/Yn/FDoqndh/9vNuQfXRDvTuXKLxfD/JtZQGKFT8MGcJBK644g==
   dependencies:
     flat-cache "^2.0.1"
+
+file-exists@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/file-exists/-/file-exists-5.0.1.tgz#1dcd017f787fc7be7a09a6ef3e6a3550cea31198"
+  integrity sha512-TeBMgeKbdSsQtcY2XqKY/yTa4BciMD/Gw8YcND0XMDZt4CDj87l1Wl4x7K0ravZ80tZcyIGMD0hj2VSRPR8M8Q==
 
 file-loader@3.0.1:
   version "3.0.1"
@@ -8125,6 +8157,11 @@ raf@3.4.1:
   integrity sha512-Sq4CW4QhwOHE8ucn6J34MqtZCeWFP2aQSmrlroYgqAV1PjStIhJXxYuTgUIfkEk7zTLjmIjLmU5q+fbD1NnOJA==
   dependencies:
     performance-now "^2.1.0"
+
+random-weighted@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/random-weighted/-/random-weighted-1.0.0.tgz#64904395741edf473b40b92cd766d8741ecc9d23"
+  integrity sha1-ZJBDlXQe30c7QLks12bYdB7MnSM=
 
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5:
   version "2.1.0"
