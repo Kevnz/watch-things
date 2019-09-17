@@ -1,5 +1,17 @@
 version: 2.1
 
+jobs:
+  build:
+    docker:
+      - image: circleci/node:12
+
+    working_directory: ~/watcher
+
+    steps:
+      - checkout
+      - run: yarn install
+      - run: yarn build
+
 workflows:
   version: 2
   hourly:
@@ -12,14 +24,6 @@ workflows:
                 - "master"
     jobs:
        - "build"
-jobs:
   build:
-    docker:
-      - image: circleci/node:12
-
-    working_directory: ~/watcher
-
-    steps:
-      - checkout
-      - run: yarn install
-      - run: yarn build
+    jobs:
+      - "build"
