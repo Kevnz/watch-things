@@ -3,9 +3,21 @@ commands:
   client_build:
     description: 'Build The UI Bits'
     steps:
+      - checkout
       - run: yarn install
       - run: yarn build
-
+workflows:
+  version: 2
+  hourly:
+    triggers:
+      - schedule:
+          cron: "0 * * * *"
+          filters:
+            branches:
+              only:
+                - "master"
+    jobs:
+       - "client_build"
 jobs:
   build:
     docker:
@@ -14,5 +26,4 @@ jobs:
     working_directory: ~/watcher
 
     steps:
-      - checkout
       - client_build
