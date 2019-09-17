@@ -26,4 +26,6 @@ jobs:
     working_directory: ~/watcher
 
     steps:
-      - client_build
+      - checkout
+      - run: yarn install
+      - run: yarn build
