@@ -17,7 +17,7 @@ workflows:
               only:
                 - "master"
     jobs:
-       - "client_build"
+       - "build"
 jobs:
   build:
     docker:
