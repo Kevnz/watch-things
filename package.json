@@ -1,6 +1,6 @@
 {
   "name": "watcher",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@brightleaf/elements": "^0.25.0",
@@ -8,7 +8,7 @@
     "@kev_nz/async-tools": "^1.2.3",
     "@reach/router": "^1.2.1",
     "back-off": "^4.2.0",
-    "creature-features": "^4.1.0",
+    "creature-features": "^5.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-form-elements": "^4.12.0",
