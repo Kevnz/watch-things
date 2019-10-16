@@ -73,42 +73,12 @@ jobs:
       - checkout
       - run: npm install
       - run: npm run build
-      - run: rm -rf node_modules
-      - run: rm -r build
-      - checkout
-      - run: npm install
-      - run: npm run build
-      - run: rm -rf node_modules
-      - run: rm -r build
-      - checkout
-      - run: npm install
-      - run: npm run build
-      - run: rm -rf node_modules
-      - run: rm -r build
-      - checkout
-      - run: npm install
-      - run: npm run build
 
   builder:
     executor: super-machine
 
     working_directory: ~/watcher
     steps:
-      - checkout
-      - run: npm install
-      - run: npm run build
-      - run: rm -rf node_modules
-      - run: rm -r build
-      - checkout
-      - run: npm install
-      - run: npm run build
-      - run: rm -rf node_modules
-      - run: rm -r build
-      - checkout
-      - run: npm install
-      - run: npm run build
-      - run: rm -rf node_modules
-      - run: rm -r build
       - checkout
       - run: npm install
       - run: npm run build
@@ -154,10 +124,5 @@ workflows:
     jobs:
        - "test"
        - "build"
-       - "buildAgain"
-       - "builder"
-       - "buildAgain"
-       - "build"
-       - "builder"
        - "buildAgain"
        - "builder"
