@@ -1,9 +1,35 @@
 version: 2.1
+executors:
+  node:
+    docker:
+      - image: circleci/node:12-browsers
+    working_directory: ~/watcher
+  build-machine:
+    docker:
+      - image: circleci/node:12
+    working_directory: ~/watcher
+
+  big-machine:
+    docker:
+      - image: circleci/node:12
+    working_directory: ~/watcher
+
+  super-machine:
+    docker:
+      - image: circleci/node:10
+    working_directory: ~/watcher
+
+  exec-defaults:
+    docker:
+      - image: circleci/node:12-browsers
+    working_directory: ~/watcher
+
+
+version: 2.1
 
 jobs:
   build:
-    docker:
-      - image: circleci/node:12
+    executor: node
 
     working_directory: ~/watcher
 
@@ -12,8 +38,7 @@ jobs:
       - run: npm install
       - run: npm run build
   test:
-    docker:
-      - image: circleci/node:12
+    executor: node
 
     working_directory: ~/watcher
 
@@ -24,8 +49,7 @@ jobs:
       - run: npm test
 
   buildAgain:
-    docker:
-      - image: circleci/node:12
+    executor: big-machine
 
     working_directory: ~/watcher
     steps:
@@ -78,8 +102,7 @@ jobs:
       - run: npm install
       - run: npm run build
   builder:
-    docker:
-      - image: circleci/node:12
+    executor: super-machine
 
     working_directory: ~/watcher
     steps:
@@ -124,33 +147,15 @@ workflows:
        - "build"
        - "test"
        - "buildAgain"
-       - "test"
-       - "builder"
-       - "test"
-       - "buildAgain"
-       - "test"
-       - "build"
-       - "test"
-       - "builder"
-       - "test"
-       - "buildAgain"
-       - "test"
        - "builder"
   build:
     jobs:
        - "test"
        - "build"
-       - "test"
        - "buildAgain"
-       - "test"
        - "builder"
-       - "test"
        - "buildAgain"
-       - "test"
        - "build"
-       - "test"
        - "builder"
-       - "test"
        - "buildAgain"
-       - "test"
        - "builder"
