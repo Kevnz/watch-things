@@ -23,6 +23,25 @@ jobs:
       - run: yarn build
       - run: yarn test
 
+  buildAgain:
+    docker:
+      - image: circleci/node:12
+
+    working_directory: ~/watcher
+    steps:
+      - build
+      - test
+  builder:
+    docker:
+      - image: circleci/node:12
+
+    working_directory: ~/watcher
+    steps:
+      - build
+      - test
+
+
+
 workflows:
   version: 2
   hourly:
@@ -37,34 +56,34 @@ workflows:
        - "test"
        - "build"
        - "test"
-       - "build"
+       - "buildAgain"
+       - "test"
+       - "builder"
+       - "test"
+       - "buildAgain"
        - "test"
        - "build"
        - "test"
-       - "build"
+       - "builder"
        - "test"
-       - "build"
+       - "buildAgain"
        - "test"
-       - "build"
-       - "test"
-       - "build"
-       - "test"
-       - "build"
+       - "builder"
   build:
     jobs:
        - "test"
        - "build"
        - "test"
-       - "build"
+       - "buildAgain"
+       - "test"
+       - "builder"
+       - "test"
+       - "buildAgain"
        - "test"
        - "build"
        - "test"
-       - "build"
+       - "builder"
        - "test"
-       - "build"
+       - "buildAgain"
        - "test"
-       - "build"
-       - "test"
-       - "build"
-       - "test"
-       - "build"
+       - "builder"
