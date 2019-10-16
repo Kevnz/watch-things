@@ -32,6 +32,51 @@ jobs:
       - checkout
       - run: npm install
       - run: npm run build
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - checkout
+      - run: npm install
+      - run: npm run build
   builder:
     docker:
       - image: circleci/node:12
@@ -44,7 +89,24 @@ jobs:
       - checkout
       - run: npm install
       - run: npm run build
-
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - checkout
+      - run: npm install
+      - run: npm run build
 
 
 workflows:
