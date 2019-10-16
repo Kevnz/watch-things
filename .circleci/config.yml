@@ -53,51 +53,42 @@ jobs:
       - checkout
       - run: npm install
       - run: npm run build
+      - run: rm -r node_modules
+      - run: rm -r build
       - checkout
       - run: npm install
       - run: npm run build
+      - run: rm -r node_modules
+      - run: rm -r build
       - checkout
       - run: npm install
       - run: npm run build
+      - run: rm -r node_modules
+      - run: rm -r build
       - checkout
       - run: npm install
       - run: npm run build
+      - run: rm -r node_modules
+      - run: rm -r build
       - checkout
       - run: npm install
       - run: npm run build
+      - run: rm -r node_modules
+      - run: rm -r build
       - checkout
       - run: npm install
       - run: npm run build
+      - run: rm -r node_modules
+      - run: rm -r build
       - checkout
       - run: npm install
       - run: npm run build
+      - run: rm -r node_modules
+      - run: rm -r build
       - checkout
       - run: npm install
       - run: npm run build
-      - checkout
-      - run: npm install
-      - run: npm run build
-      - checkout
-      - run: npm install
-      - run: npm run build
-      - checkout
-      - run: npm install
-      - run: npm run build
-      - checkout
-      - run: npm install
-      - run: npm run build
-      - checkout
-      - run: npm install
-      - run: npm run build
-      - checkout
-      - run: npm install
-      - run: npm run build
-      - checkout
-      - run: npm install
-      - run: npm run build
-      - checkout
-      - run: npm install
-      - run: npm run build
+
   builder:
     executor: super-machine
 
@@ -106,24 +97,38 @@ jobs:
       - checkout
       - run: npm install
       - run: npm run build
+      - run: rm -r node_modules
+      - run: rm -r build
       - checkout
       - run: npm install
       - run: npm run build
+      - run: rm -r node_modules
+      - run: rm -r build
       - checkout
       - run: npm install
       - run: npm run build
+      - run: rm -r node_modules
+      - run: rm -r build
       - checkout
       - run: npm install
       - run: npm run build
+      - run: rm -r node_modules
+      - run: rm -r build
       - checkout
       - run: npm install
       - run: npm run build
+      - run: rm -r node_modules
+      - run: rm -r build
       - checkout
       - run: npm install
       - run: npm run build
+      - run: rm -r node_modules
+      - run: rm -r build
       - checkout
       - run: npm install
       - run: npm run build
+      - run: rm -r node_modules
+      - run: rm -r build
       - checkout
       - run: npm install
       - run: npm run build
