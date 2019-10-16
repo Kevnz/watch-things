@@ -24,9 +24,6 @@ executors:
       - image: circleci/node:12-browsers
     working_directory: ~/watcher
 
-
-version: 2.1
-
 jobs:
   build:
     executor: node
