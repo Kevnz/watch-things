@@ -3,16 +3,16 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@brightleaf/elements": "^0.25.0",
-    "@brightleaf/react-hooks": "^2.1.0",
+    "@brightleaf/elements": "^1.2.0",
+    "@brightleaf/react-hooks": "^4.1.1",
     "@kev_nz/async-tools": "^1.2.3",
     "@reach/router": "^1.2.1",
     "back-off": "^4.2.0",
     "creature-features": "^5.0.0",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
     "react-form-elements": "^4.12.0",
-    "react-scripts": "3.1.1"
+    "react-scripts": "3.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
