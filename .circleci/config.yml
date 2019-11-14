@@ -146,6 +146,7 @@ workflows:
             branches:
               only:
                 - "master"
+                - "updates"
     jobs:
        - "test"
        - "build"
