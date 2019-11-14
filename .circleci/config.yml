@@ -19,6 +19,11 @@ executors:
       - image: circleci/node:10
     working_directory: ~/watcher
 
+  giant-machine:
+    docker:
+      - image: circleci/node:12
+    working_directory: ~/watcher
+
   exec-defaults:
     docker:
       - image: circleci/node:12-browsers
@@ -102,7 +107,34 @@ jobs:
       - checkout
       - run: npm install
       - run: npm run build
+  worker:
+    executor: giant-machine
 
+    working_directory: ~/watcher
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - run: rm -rf node_modules
+      - run: rm -r build
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - run: rm -rf node_modules
+      - run: rm -r build
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - run: rm -rf node_modules
+      - run: rm -r build
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - run: rm -rf node_modules
+      - run: rm -r build
+      - checkout
+      - run: npm install
+      - run: npm run build
 
 workflows:
   version: 2
@@ -120,9 +152,11 @@ workflows:
        - "test"
        - "buildAgain"
        - "builder"
+       - "worker"
   build:
     jobs:
        - "test"
        - "build"
        - "buildAgain"
        - "builder"
+       - "worker"
