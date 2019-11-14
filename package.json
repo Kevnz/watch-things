@@ -23,7 +23,8 @@
     "react-dom": "^16.11.0",
     "react-form-elements": "^4.13.2",
     "react-scripts": "3.2.0",
-    "stats-js": "^1.0.1"
+    "stats-js": "^1.0.1",
+    "xtconf": "^4.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -46,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "isom": "^1.0.0"
   }
 }
