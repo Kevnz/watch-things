@@ -12,7 +12,7 @@
     "@kev_nz/lokijs": "^1.5.7",
     "@reach/router": "^1.2.1",
     "alternative-facts": "^2.1.0",
-    "back-off": "^4.2.0",
+    "back-off": "^4.2.1",
     "creature-features": "^5.0.0",
     "days-in-a-row": "^3.0.0",
     "fuxor": "^2.2.5",
