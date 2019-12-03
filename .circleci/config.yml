@@ -50,7 +50,7 @@ jobs:
       - run: npm run build
       - run: npm test
 
-  buildAgain:
+  bigBuild:
     executor: big-machine
 
     working_directory: ~/watcher
@@ -151,13 +151,13 @@ workflows:
        - "test"
        - "build"
        - "test"
-       - "buildAgain"
+       - "bigBuild"
        - "builder"
        - "worker"
   build:
     jobs:
        - "test"
        - "build"
-       - "buildAgain"
+       - "bigBuild"
        - "builder"
        - "worker"
