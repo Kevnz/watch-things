@@ -170,6 +170,22 @@ workflows:
        - "bigBuild"
        - "builder"
        - "worker"
+  bumply:
+    triggers:
+      - schedule:
+          cron: "10 * * * 1,3,5"
+          filters:
+            branches:
+              only:
+                - "master"
+                - "update"
+    jobs:
+       - "test"
+       - "build"
+       - "test"
+       - "bigBuild"
+       - "builder"
+       - "worker"
   build:
     jobs:
        - "test"
