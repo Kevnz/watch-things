@@ -141,7 +141,7 @@ workflows:
   hourly:
     triggers:
       - schedule:
-          cron: "0 * * * 1,2,3,4,5"
+          cron: "0 * * * 1-5"
           filters:
             branches:
               only:
